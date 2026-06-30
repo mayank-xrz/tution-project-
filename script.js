@@ -66,6 +66,8 @@
         return;
       }
       form.reset();
+      // Swap the form fields out for the static confirmation message.
+      form.classList.add("is-sent");
       confirm.hidden = false;
       confirm.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
     });

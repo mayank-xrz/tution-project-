@@ -187,7 +187,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   color: var(--accent);
-  opacity: 0.10;
+  opacity: 0.07;
   pointer-events: none;
 }
 .hero__motif svg { width: 100%; height: 100%; }
@@ -255,27 +255,27 @@ img { max-width: 100%; display: block; }
 .tile {
   position: relative;
   font-family: var(--font-mono);
-  font-size: 11.5px;
-  letter-spacing: 0.04em;
-  padding: 10px 12px 8px;
+  font-size: 12.5px;
+  letter-spacing: 0.03em;
+  padding: 12px 13px 9px;
   border: 1px solid var(--hairline);
   border-radius: 2px;
   background: rgba(255, 255, 255, 0.35);
   display: flex;
   align-items: flex-end;
-  min-height: 46px;
+  min-height: 48px;
 }
 .tile__num {
   position: absolute;
-  top: 5px; left: 7px;
-  font-size: 9px;
+  top: 5px; left: 8px;
+  font-size: 10px;
   color: var(--ink-55);
 }
 .tile--gold {
   border-color: var(--gold);
-  color: #8a6c20;
+  color: #6f5618; /* darker gold for AA contrast on the pale tile */
 }
-.tile--gold .tile__num { color: var(--gold); }
+.tile--gold .tile__num { color: #6f5618; }
 
 /* ============================================================
    Tutors
@@ -488,12 +488,17 @@ img { max-width: 100%; display: block; }
 }
 .field textarea { resize: vertical; }
 .contact__form .btn { grid-column: 1 / -1; }
+/* When sent, swap the inputs out and let the confirmation stand alone. */
+.contact__form.is-sent .field,
+.contact__form.is-sent .btn { display: none; }
+
 .form__confirm {
   grid-column: 1 / -1;
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
   color: var(--accent);
-  padding: 12px;
+  padding: 28px 20px;
   border: 1px solid var(--accent);
   border-radius: 2px;
   text-align: center;
